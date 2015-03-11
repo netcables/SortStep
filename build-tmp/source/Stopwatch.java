@@ -21,7 +21,8 @@ public class Stopwatch {
   public void reset()
     /* resets the elapsed time to 0 */
   {
-  	System.nanoTime()
+  	start = 0;
+  	stop = 0;
   }
 }
 
