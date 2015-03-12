@@ -76,7 +76,6 @@ private void fillArray(int numInts, int largestInt)
     myArray[loop] = (int)(Math.random()*largestInt + 1);
   }
 }
-
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "SortStep" };
     if (passedArgs != null) {

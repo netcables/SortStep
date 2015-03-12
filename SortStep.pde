@@ -60,4 +60,3 @@ private void fillArray(int numInts, int largestInt)
     myArray[loop] = (int)(Math.random()*largestInt + 1);
   }
 }
-
