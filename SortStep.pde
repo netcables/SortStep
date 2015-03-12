@@ -26,6 +26,11 @@ public void selectionSortTest()
 public void bubbleSortTest()
 {
   System.out.println("Testing Bubble Sort");
+  if(isSorted() == false)
+  {
+    System.out.println("Sort no working");
+    return;
+  }
   fillArray(numInts, largestInt);
   watch.reset();
   watch.start();
@@ -36,6 +41,11 @@ public void bubbleSortTest()
 public void insertionSortTest()
 {
   System.out.println("Testing Insertion Sort");
+  if(isSorted() == false)
+  {
+    System.out.println("Sort no working");
+    return;
+  }
   fillArray(numInts, largestInt);
   watch.reset();
   watch.start();
@@ -46,6 +56,11 @@ public void insertionSortTest()
 public void mergeSortTest()
 {
   System.out.println("Testing Merge Sort");
+  if(isSorted() == false)
+  {
+    System.out.println("Sort no working");
+    return;
+  }
   fillArray(numInts, largestInt);
   watch.reset();
   watch.start();
@@ -59,4 +74,11 @@ private void fillArray(int numInts, int largestInt)
   {
     myArray[loop] = (int)(Math.random()*largestInt + 1);
   }
+}
+private boolean isSorted()
+{
+  for(int i = 0; i < myArray.length-1; i++)
+    if(myArray[i] > myArray[i+1])
+      return false;
+  return true;
 }
