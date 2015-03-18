@@ -54,12 +54,10 @@ public class Sorts
 
   private void merge(int[] a, int first, int mid, int last)
   {
-    //your code here
   }
 
   public void mergeSort(int[] a, int first, int last)
   {
-    //your code here
   }
 }
 
