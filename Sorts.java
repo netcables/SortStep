@@ -51,13 +51,48 @@ public class Sorts
       list[position] = key;
     }
   }
-
   private void merge(int[] a, int first, int mid, int last)
   {
+    int[] temp = new int[a.length];
+    int indexA = first;
+    int indexB = mid + 1;
+    for(int i = 0; i < a.length; i++)
+    {
+      if(indexA > mid)
+      {
+        temp[i] = a[indexB];
+        indexB++;
+      }
+      else if(indexB > last)
+      {
+        temp[i] = a[indexA];
+        indexA++;
+      }
+      else if(a[indexA] > a[indexB])
+      {
+        temp[i] = a[indexB];
+        indexB++;
+      }
+      else
+      {
+        temp[i] = a[indexA];
+        indexA++;
+      }
+    }
+    for(int i = 0; i < a.length; i++)
+    {
+      a[i] = temp[i];
+    }
   }
-
   public void mergeSort(int[] a, int first, int last)
   {
+    int mid = a.length/2;
+    if()
+    {
+      mergeSort(a, first, mid);
+      mergeSort(a, mid + 1, last);
+    }
+
   }
 }
 
