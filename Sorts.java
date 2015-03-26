@@ -56,7 +56,7 @@ public class Sorts
     int[] temp = new int[a.length];
     int indexA = first;
     int indexB = mid + 1;
-    for(int i = 0; i < a.length; i++)
+    for(int i = first; i <= last; i++)
     {
       if(indexA > mid)
       {
@@ -79,20 +79,20 @@ public class Sorts
         indexA++;
       }
     }
-    for(int i = 0; i < a.length; i++)
+    for(int i = first; i <= last; i++)
     {
       a[i] = temp[i];
     }
   }
   public void mergeSort(int[] a, int first, int last)
   {
-    int mid = a.length/2;
-    if()
+    if(first < last)
     {
+      int mid = first + (last - first)/2;
       mergeSort(a, first, mid);
       mergeSort(a, mid + 1, last);
+      merge(a, first, mid, last);
     }
-
   }
 }
 
